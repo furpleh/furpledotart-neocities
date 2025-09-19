@@ -1,22 +1,21 @@
-# General OS/editor cruft
-# macOS
+
 .DS_Store
 .AppleDouble
 .LSOverride
 __MACOSX/
 
-# Windows
+
 Thumbs.db
 Thumbs.db:encryptable
 Desktop.ini
 $RECYCLE.BIN/
 
-# VS Code
+
 .vscode/
 .history/
 *.code-workspace
 
-# Logs and temp
+
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -27,13 +26,11 @@ tmp/
 .temp/
 .cache/
 
-# Node (if ever used locally for tooling)
 node_modules/
 package-lock.json
 pnpm-lock.yaml
 yarn.lock
 
-# Build output (if you add a build step later)
 dist/
 build/
 .out/
@@ -41,13 +38,12 @@ build/
 .vercel/
 .svelte-kit/
 
-# Python (just in case)
+
 __pycache__/
 *.py[cod]
 *.egg-info/
 .venv/
 
-# Images/tools cache
 *.psd
 *.ai
 *.sketch
