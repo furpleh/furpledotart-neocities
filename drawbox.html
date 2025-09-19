@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRAWBOX</title>
+    <style>
+        * {box-sizing: border-box;}
+        canvas {
+            border: 1px solid black;
+            cursor: crosshair;
+        }
+        /* --- Added responsive scaling --- */
+        #drawboxcanvas {
+            width: 100%;
+            max-width: 500px;
+            height: auto;           /* preserves 1:1 because intrinsic is 500x500 */
+            display: block;
+            touch-action: none;     /* prevent scrolling while drawing on mobile */
+        }
+        .wrapper2 {
+            max-width: 520px;
+        }
+        #gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .image-container {
+            border: 1px solid #ccc;
+            padding: 5px;
+            max-width: 200px;
+            text-align: center;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+<div class="wrapper2">
+    <button type="button" class="button small" onclick="window.history.back()">&lt;</button>
+    <h1 class="poopy"><img class="logo" src="https://furple.neocities.org/assets/logosmall.gif" width="30%" alt="furple.art logo"> DRAWBOX</h1>
+    <p class="poopy" style="font-size:10px">draw something and submit it to the gallery!</p>
+    <img src="https://furple.neocities.org/assets/divvy.gif" width="500" alt="-------------">
+    <br>
+    <canvas id="drawboxcanvas" width="500" height="500"></canvas>
+    <br>
+    <div onclick="change_color(this)" style="background:red" class="stroke-color"></div>
+    <div onclick="change_color(this)" style="background:blue" class="stroke-color"></div>
+
+ <button id="undo" class="button">Undo</button>
+<button id="redo" class="button">Redo</button>
+    <button onclick="Clear()" class="button">Clear</button>
+
+    <input type="color" oninput="stroke_color = this.value">
+    <input type="range" min="1" max="100" oninput="stroke_width = this.value">
+    <br>
+<input type="text" id="artistName" placeholder="Name (optional :3)" maxlength="255">
+
+    <button id="submit" class="button">Submit drawing</button>
+    <br>
+    <h1 class="poopy" style="font-size:15px">RULES</h1>
+    <ul class="poopy" style="font-size:10px">
+        <li>no nsfw (gore is allowed, but don't go overboard)</li>
+        <li>no hateful stuff (THIS INCLUDES STUFF LIKE SYMBOLS.. YOU KNOW WHAT I MEAN.)</li>
+     <li>don't be a jerk</li>
+    <li>please don't spam (advertising your site is allowed, but don't go crazy)</li>
+     <li><marquee>if your name is malik and you live in chula vista, ca everything you post will be deleted /dir</marquee></li>
+    </ul>
+    <p class="poopy" id="status"></p>
+	    <img src="https://furple.neocities.org/assets/divvy.gif" width="500" alt="-------------">
+    <h1 class="poopy">Submitted Drawings (o゜▽゜)o☆</h1>
+    <div id="gallery">Loading images...</div>
+    
+    
+    <script src="drawbox.js"></script>
+</div>
+
+</body>
+</html>

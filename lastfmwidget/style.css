@@ -1,0 +1,51 @@
+
+@font-face {
+  font-family: "segoe";
+  src: url(https://furple.neocities.org/assets/segoe.ttf), Segoe Script, cursive;
+}
+html {
+      text-decoration: none;
+    font-size: 12px;
+  font-family: "segoe",Segoe Script, cursive;
+  color: rgb(217, 190, 255);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black,0px 0px 4px #000000 ;
+}
+
+table {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.refresh {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.cover {
+    border-radius: 2px;
+    box-shadow: 0px 0px 5px #000000;
+}
+td {
+    vertical-align: middle;
+}
+
+td#cover {
+	padding-right: 5px;
+}
+
+td#date {
+	font-style: italic;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a#track {
+    font-weight: bold;
+}
+
+a:hover {
+    color: #956dda;
+}
